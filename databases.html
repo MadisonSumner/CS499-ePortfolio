@@ -1,16 +1,110 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Databases Artifact</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <h1>Enhancement Three: Databases</h1>
 
-    <h1>Databases Artifact</h1>
+    <p><strong>Course:</strong> CS-499 Computer Science Capstone</p>
+    <p><strong>Original Course:</strong> CS 360</p>
+    <p><strong>Original Development Period:</strong> September–October 2025</p>
 
-    <a href="index.html">Home</a>
+    <!-- Artifact Description Card -->
+    <div class="card">
+        <h2>Artifact Description</h2>
+        <p>
+            The selected artifact is an Android inventory management application originally developed for CS 360.
+            It includes a login page, an inventory page that displays item names, quantities, and creation dates,
+            and a notification system to alert users when stock levels are low.
+        </p>
+        <p>
+            While functional, the original application lacked structured organization for categories and efficient
+            relational queries.
+        </p>
+    </div>
 
-    <p>Hello World - Databases Page</p>
+    <!-- Justification Card -->
+    <div class="card">
+        <h2>Justification for Inclusion</h2>
+        <p>
+            This artifact demonstrates my ability to implement relational database enhancements in a production-like
+            application.
+            Prior architectural improvements ensured that domain logic was agnostic to the database, allowing database
+            enhancements
+            without affecting existing functionality.
+        </p>
+        <p>
+            All table definitions are organized under their respective contracts — for example, categories are defined
+            by
+            <code>CategoryTableContract</code> and inventory items by <code>InventoryItemTableContract</code>.
+            These contracts are applied in <code>InventoryDbContext</code>, which manages all database setup.
+        </p>
+        <p>
+            For this milestone, I added a Category table linked to the Inventory table via a foreign key and created an
+            index on the foreign key
+            to improve query performance when filtering by category. The Category table is mapped to a domain model, and
+            inventory items can now
+            be added, edited, and filtered by category. These enhancements demonstrate practical database skills,
+            including table creation,
+            foreign key relationships, indexing, and integration of database structures with application features.
+        </p>
+    </div>
+
+    <!-- Course Outcome Card -->
+    <div class="card">
+        <h2>Course Outcome Alignment</h2>
+        <p>
+            This enhancement demonstrates competency in applying well-founded database techniques to implement
+            functional solutions.
+            It aligns with outcomes for building structured data environments that support decision-making, delivering
+            technically sound solutions,
+            and using innovative database practices.
+        </p>
+        <p>
+            Consolidating planned outcomes into this single artifact demonstrates database design, management, and
+            integration within a real-world application.
+        </p>
+    </div>
+
+    <!-- Reflection Card -->
+    <div class="card">
+        <h2>Reflection on the Enhancement Process</h2>
+        <p>
+            Enhancing the database involved applying migrations for the <code>Category_ID</code> column to the existing
+            Inventory table.
+            A significant challenge was maintaining data integrity while updating the schema on existing installations,
+            which was solved by updating
+            the <code>onUpgrade</code> method in <code>InventoryDbContext</code>.
+        </p>
+        <p>
+            Another challenge was that SQLite did not support foreign keys by default. After research, I enabled this
+            feature with an
+            <code>onOpen</code> function. These solutions strengthened my understanding of relational database theory,
+            foreign keys, indexing,
+            and maintaining data integrity in a functional application.
+        </p>
+        <p>
+            Overall, this enhancement reinforced the importance of aligning database design with application
+            functionality and demonstrated
+            practical skills in implementing robust, maintainable, and scalable database solutions.
+        </p>
+    </div>
+
+    <!-- Download and GitHub Buttons -->
+    <a class="button" href="assets/Databases.docx" download>
+        Download Narrative (Word)
+    </a>
+
+    <a class="button" href="https://github.com/MadisonSumner/CS-499-Capstone-Project/pull/3/changes" target="_blank">
+        View Code Changes on GitHub
+    </a>
+
+    <a class="button" href="index.html">Back to Home</a>
 
 </body>
+
 </html>
