@@ -1,16 +1,103 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Software Engineering Artifact</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <h1>Enhancement One: Software Design & Engineering</h1>
 
-    <h1>Software Engineering Artifact</h1>
+    <p><strong>Course:</strong> CS-499 Computer Science Capstone</p>
+    <p><strong>Original Course:</strong> CS 360</p>
+    <p><strong>Original Development Period:</strong> September–October 2025</p>
 
-    <a href="index.html">Home</a>
+    <!-- Artifact Description Card -->
+    <div class="card">
+        <h2>Artifact Description</h2>
+        <p>
+            The selected artifact is an Android inventory management application originally developed for CS 360.
+            The application includes a login interface, an inventory display page showing item names, quantities, and
+            creation dates,
+            as well as a notification mechanism designed to alert users when stock levels are low.
+        </p>
+        <p>
+            While the initial implementation was functional, it lacked a clear separation of concerns and domain-focused
+            architecture.
+            This limitation provided an opportunity to enhance the system through structural and architectural
+            improvements.
+        </p>
+    </div>
 
-    <p>Hello World - Software Engineering Artifact Page</p>
+    <!-- Justification Card -->
+    <div class="card">
+        <h2>Justification for Inclusion</h2>
+        <p>
+            This artifact was chosen for inclusion in my ePortfolio because it reflects a practical software solution
+            while offering meaningful opportunities to demonstrate software design and engineering competencies.
+            The application integrates database interactions, user interface components, and business logic,
+            making it well suited for architectural refinement.
+        </p>
+        <p>
+            The primary enhancement involved refactoring the application to follow domain-driven design (DDD)
+            principles.
+            This refactor introduced clearly defined repositories and contexts to separate data persistence from domain
+            logic.
+            Domain objects were established with encapsulated validation using <code>DomainResult</code>,
+            improving structure and reliability.
+        </p>
+        <p>
+            Additionally, the user interface was reorganized to align more closely with domain workflows,
+            particularly within the inventory editing functionality. This restructuring illustrates effective
+            collaboration
+            between the domain, repository, and UI layers. The resulting system emphasizes clean architecture,
+            maintainability, extensibility, and improved testability.
+        </p>
+    </div>
 
+    <!-- Course Outcome Card -->
+    <div class="card">
+        <h2>Course Outcome Alignment</h2>
+        <p>
+            This enhancement directly supports the program outcome related to software design and engineering.
+            The refactoring demonstrates my ability to design, implement, and refine a software system
+            using established architectural practices while maintaining separation between domain, infrastructure,
+            and presentation layers.
+        </p>
+    </div>
+
+    <!-- Reflection Card -->
+    <div class="card">
+        <h2>Reflection on the Enhancement Process</h2>
+        <p>
+            Throughout the enhancement process, I gained a deeper appreciation for planning around single-responsibility
+            principles
+            and well-defined interface contracts prior to implementation. Refactoring the original codebase, which
+            lacked
+            sufficient documentation and structure, required deliberate analysis and systematic reorganization.
+        </p>
+        <p>
+            Research into domain-driven design principles guided the implementation of repositories, contexts,
+            and domain entities in a way that integrated seamlessly with the existing system. A key challenge involved
+            maintaining backward compatibility to preserve original functionality while improving architectural clarity.
+        </p>
+        <p>
+            Overall, this enhancement strengthened my understanding of system architecture, domain modeling,
+            and the practical application of structured design principles in a real-world software environment.
+        </p>
+    </div>
+
+    <!-- Download and Home Buttons -->
+    <a class="button" href="index.html">Home</a>
+
+    <a class="button" href="assets/Software-Engineering-Narrative.docx" download>
+        Download Word Version
+    </a>
+
+    <a class="button" href="https://github.com/MadisonSumner/CS-499-Capstone-Project/pull/1/changes" target="_blank">
+        Preview the Code Changes
+    </a>
 </body>
+
 </html>
