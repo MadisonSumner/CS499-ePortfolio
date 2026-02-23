@@ -1,16 +1,102 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Algorithms & Data Structures Artifact</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Algorithms & Data Structures Artifact</h1>
+    <h1>Enhancement Two: Algorithms & Data Structures</h1>
 
-    <a href="index.html">Home</a>
+    <p><strong>Course:</strong> CS-499 Computer Science Capstone</p>
+    <p><strong>Original Course:</strong> CS 360</p>
+    <p><strong>Original Development Period:</strong> September–October 2025</p>
 
-    <p>Hello World - Algorithms & Data Structures Page</p>
+    <!-- Artifact Description Card -->
+    <div class="card">
+        <h2>Artifact Description</h2>
+        <p>
+            The selected artifact is an Android inventory management application originally developed for CS 360.
+            It includes a login page, an inventory display page showing item names, quantities, and creation dates,
+            and a notification system intended to alert users when stock levels are low.
+        </p>
+        <p>
+            While functional, the original application lacked dynamic automation to help users manage low-stock items
+            effectively.
+        </p>
+    </div>
 
+    <!-- Justification Card -->
+    <div class="card">
+        <h2>Justification for Inclusion</h2>
+        <p>
+            This artifact was chosen because it provides a real-world context to demonstrate algorithmic and data
+            structure skills
+            while enhancing an existing application. The enhancement introduces a <strong>ShoppingListService</strong>
+            that automatically identifies items below user-defined thresholds and dynamically maintains a prioritized
+            shopping list.
+        </p>
+        <p>
+            This feature uses a <code>PriorityQueue</code> data structure to efficiently sort items based on how
+            critically low their stock is relative to their thresholds. The service evaluates all inventory items
+            whenever updates occur, adding items below threshold and removing restocked items.
+        </p>
+        <p>
+            Encapsulating this logic in a dedicated service separates algorithmic decision-making from the UI and
+            database layers,
+            emphasizing clean architecture and demonstrating practical application of advanced data structures.
+        </p>
+    </div>
+
+    <!-- Course Outcome Card -->
+    <div class="card">
+        <h2>Course Outcome Alignment</h2>
+        <p>
+            This enhancement aligns with course outcomes by demonstrating the ability to design and evaluate computing
+            solutions
+            using algorithmic principles and appropriate data structures.
+            Implementing the shopping list service illustrates competency in algorithmic design, specifically in using a
+            priority queue to efficiently manage and sort items based on stock levels relative to thresholds.
+        </p>
+        <p>
+            The work reflects progress toward employing well-founded computing techniques that balance functional value
+            with efficiency and maintainability.
+        </p>
+    </div>
+
+    <!-- Reflection Card -->
+    <div class="card">
+        <h2>Reflection on the Enhancement Process</h2>
+        <p>
+            Implementing the shopping list feature gave practical experience with priority queues in Java and applying
+            them in a real-world scenario.
+            I learned to dynamically evaluate inventory items and maintain a list reflecting low-stock priorities,
+            reinforcing my understanding of algorithmic logic and collection management.
+        </p>
+        <p>
+            A major challenge was updating the database to include a new <code>lowStockThreshold</code> column.
+            Initially, the <code>onCreate()</code> method was not invoked on fresh installs, requiring careful
+            management of database versions and schema upgrades to ensure reliable functionality.
+        </p>
+        <p>
+            Overall, this enhancement strengthened my ability to integrate data structures into functional applications,
+            design services encapsulating algorithmic logic, and anticipate practical challenges in production-like
+            environments.
+        </p>
+    </div>
+
+    <!-- Download and GitHub Buttons -->
+    <a class="button" href="assets/Algorithms-Data-Structures.docx" download>
+        Download Narrative (Word)
+    </a>
+
+    <a class="button" href="https://github.com/MadisonSumner/CS-499-Capstone-Project/pull/2/changes" target="_blank">
+        View Code Changes on GitHub
+    </a>
+
+    <a class="button" href="index.html">Back to Home</a>
 </body>
+
 </html>
