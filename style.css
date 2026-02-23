@@ -49,21 +49,6 @@ h2 {
     text-align: center;
 }
 
-/* Buttons */
-.button {
-    display: inline-block;
-    padding: 10px 18px;
-    background-color: #0066cc;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.button:hover {
-    background-color: #004999;
-}
-
 .card {
     background-color: white;
     border-radius: 8px;
@@ -78,4 +63,33 @@ h2 {
     /* subtle accent */
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    /* slightly wider for balance */
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    /* pill shape */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #004999;
+}
+
+/* Cards with visible border and rounded corners */
+.card,
+.highlight-card,
+.grid-item {
+    border-radius: 20px;
+    /* keeps the rounded corners */
+    border: 1px solid #000000;
+    /* light gray border */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    background-color: white;
 }
